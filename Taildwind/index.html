@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Scrollspy with Tailwind CSS</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .active-link {
+            background-color: #c53030;
+            color: white;
+        }
+    </style>
+</head>
+
+<body class="bg-gray-100">
+    <!-- Navigation -->
+    <nav id="navbar" class="sticky top-0 bg-red-600 z-50 shadow-md">
+        <div class="max-w-7xl mx-auto flex items-center justify-between px-4 py-2">
+            <a href="#scrollspyHeading1" class="flex items-center">
+                <img src="/images/rupp-logo.png" alt="logo" class="h-10 mr-3">
+                <div>
+                    <span class="block text-white text-lg font-bold">សាកលវិទ្យាល័យភូមិន្ទភ្នំពេញ</span>
+                    <span class="block text-white text-sm">Royal University of Phnom Penh</span>
+                </div>
+            </a>
+            <ul id="nav-links" class="flex space-x-4">
+                <li>
+                    <a href="#scrollspyHeading1"
+                        class="nav-link text-white px-4 py-2 rounded-md transition">Home</a>
+                </li>
+                <li>
+                    <a href="#scrollspyHeading2"
+                        class="nav-link text-white px-4 py-2 rounded-md transition">About</a>
+                </li>
+                <li>
+                    <a href="#scrollspyHeading3"
+                        class="nav-link text-white px-4 py-2 rounded-md transition">Program</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Sections -->
+    <section id="scrollspyHeading1" class="py-16 bg-gray-100">
+        <div class="container mx-auto px-4">
+            <!-- Carousel Section -->
+            <div class="relative overflow-hidden rounded-lg mb-8">
+                <div class="relative w-full">
+                    <div class="carousel">
+                        <div class="carousel-inner">
+                         
+                            
+                            <div class="carousel-item">
+                                <img src="/images/silk3.jpg" class="w-full h-auto object-cover" alt="Carousel Image 3" />
+                            </div>
+                       
+                          
+                        </div>
+                    </div>
+                    <!-- Carousel Controls -->
+                    <button class="absolute top-1/2 left-4 transform -translate-y-1/2 bg-gray-800 text-white rounded-full p-2">
+                        <span>&#8249;</span>
+                    </button>
+                    <button class="absolute top-1/2 right-4 transform -translate-y-1/2 bg-gray-800 text-white rounded-full p-2">
+                        <span>&#8250;</span>
+                    </button>
+                </div>
+            </div>
+    
+            <!-- Spotlight Event -->
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-4">
+                <!-- Main Content -->
+                <div class="col-span-2">
+                    <!-- Spotlight Event -->
+                    <div class="border border-red-600 p-4 rounded-lg bg-white mb-6">
+                        <h2 class="text-lg font-bold text-gray-800 mb-4">សេចក្តីជូនដំណឹង</h2>
+                        <div class="flex items-start gap-4">
+                            <a href="#" target="_blank">
+                                <img src="/images/Invitation for Bids NCB-G-064.png" class="h-24 w-20 object-cover" alt="Spotlight Event" />
+                            </a>
+                            <div>
+                                <a href="#" target="_blank" class="text-red-600 font-bold underline">
+                                    Invitation for Bids NCB-G-064
+                                </a>
+                                <p class="text-gray-600 mt-2">Click to download Bidding Advertisement</p>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <!-- Scholarship Section -->
+                    <div class="border border-red-600 p-4 rounded-lg bg-white mb-6">
+                        <h2 class="text-lg font-bold text-gray-800 uppercase mb-4">Scholarship</h2>
+                        <ul class="space-y-4">
+                            <li>
+                                <a href="#" class="text-red-600 underline">Higher Education for ASEAN Talents (HEAT)</a>
+                                <p class="text-gray-500 text-sm">Posted: 2022-01-10 00:00:00</p>
+                            </li>
+                            <li>
+                                <a href="#" class="text-red-600 underline">Nankai University Scholarship</a>
+                                <p class="text-gray-500 text-sm">Posted: 2017-05-25 13:00:56</p>
+                            </li>
+                            <li>
+                                <a href="#" class="text-red-600 underline">UTAR Scholarship for CLMV Countries 2017-2018</a>
+                                <p class="text-gray-500 text-sm">Posted: 2017-05-11 14:45:19</p>
+                            </li>
+                            <li>
+                                <a href="#" class="text-red-600 underline">Scholarship at Hong Kong Polytechnic University</a>
+                                <p class="text-gray-500 text-sm">Posted: 2016-10-11 15:53:02</p>
+                            </li>
+                        </ul>
+                        <p class="text-right mt-4">
+                            <a href="#" class="text-red-600 underline">More Scholarships »</a>
+                        </p>
+                    </div>
+    
+                    <!-- University News Section -->
+                    <div class="border border-red-600 p-4 rounded-lg bg-white">
+                        <h2 class="text-lg font-bold text-gray-800 mb-4">University News</h2>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <div>
+                                <img src="https://rupp.edu.kh/news/news_image/169_2_Job Fair 2023.jpg" alt="Job Fair 2023" class="w-full h-40 object-cover mb-4" />
+                                <a href="#" class="text-red-600 font-bold">ពិព័ណ៌ការងារឆ្នាំ២០២៣</a>
+                                <p class="text-gray-500 text-sm">2023-12-07 03:29:53</p>
+                                <p class="text-gray-600">Join us at "CJCC Job Fair December 2023".</p>
+                                <a href="#" class="text-red-600 underline">Read more...</a>
+                            </div>
+                            <div>
+                                <img src="https://rupp.edu.kh/news/news_image/169_21stTS workshop_leadership_activities_01.png" alt="Leadership Workshop" class="w-full h-40 object-cover mb-4" />
+                                <a href="#" class="text-red-600 font-bold">Workshop on the 21st Century Skills</a>
+                                <p class="text-gray-500 text-sm">2023-11-24 22:39:27</p>
+                                <p class="text-gray-600">RUPP conducted a workshop on Leadership Mindset.</p>
+                                <a href="#" class="text-red-600 underline">Read more...</a>
+                            </div>
+                        </div>
+                        <p class="text-right mt-4">
+                            <a href="#" class="text-red-600 underline">More News »</a>
+                        </p>
+                    </div>
+                </div>
+    
+                <!-- Sidebar -->
+                <div class="border border-red-600 p-4 rounded-lg bg-white">
+                    <h2 class="text-lg font-bold text-gray-800 mb-4">ទាញយកឯកសារ</h2>
+                    <p class="text-gray-800 font-bold mb-2">ពាក្យចូលរៀនឆ្នាំសិក្សា២០២២-២០២៣</p>
+                    <ul class="list-disc pl-4 space-y-2">
+                        <li><a href="#" class="text-red-600 underline">ក្របសឺមីទំហំ A3</a></li>
+                        <li><a href="#" class="text-red-600 underline">ពាក្យចុះឈ្មោះចូលរៀនទំហំ A4</a></li>
+                        <li><a href="#" class="text-red-600 underline">Student Grievance Form</a></li>
+                    </ul>
+                    <p class="text-gray-800 font-bold mt-4 mb-2">ICT Master Plan and Policy</p>
+                    <ul class="list-disc pl-4 space-y-2">
+                        <li><a href="#" class="text-red-600 underline">ICT Master Plan Summary</a></li>
+                        <li><a href="#" class="text-red-600 underline">ICT Policy Summary</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section id="scrollspyHeading2" class="py-16 bg-gray-100">
+        <div class="container mx-auto px-4">
+            <!-- Heading -->
+            <div class="mb-8">
+                <h1 class="uppercase text-3xl font-bold text-gray-800">About RUPP</h1>
+            </div>
+    
+            <!-- Section Links -->
+            <div class="border-t border-gray-400 pt-6">
+                <div class="flex justify-center">
+                    <div class="lg:w-2/3">
+                        <ul class="space-y-4 text-lg text-gray-800">
+                            <li>
+                                <a href="#section1"
+                                    class="text-red-600 underline hover:no-underline border-b-2 border-red-600">
+                                    Introduction
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#section2"
+                                    class="text-red-600 underline hover:no-underline border-b-2 border-red-600">
+                                    Vision
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#section3"
+                                    class="text-red-600 underline hover:no-underline border-b-2 border-red-600">
+                                    Mission Statement
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#section4"
+                                    class="text-red-600 underline hover:no-underline border-b-2 border-red-600">
+                                    Goals
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#section5"
+                                    class="text-red-600 underline hover:no-underline border-b-2 border-red-600">
+                                    Enabling Strategies
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#section6"
+                                    class="text-red-600 underline hover:no-underline border-b-2 border-red-600">
+                                    History
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+    
+            <!-- Content Section -->
+            <div class="lg:flex lg:space-x-8 mt-12">
+                <!-- Left Column -->
+                <div class="lg:w-2/3">
+                    <p class="text-lg text-gray-600 mb-6">
+                        To read RUPP's strategic plan 2019-2023 in detail, please download below:
+                    </p>
+    
+                    <!-- Table -->
+                    <table class="w-full border border-gray-300 text-left mb-8">
+                        <thead class="bg-gray-200">
+                            <tr>
+                                <th class="px-4 py-2 text-gray-800">Document</th>
+                                <th class="px-4 py-2 text-gray-800">Type</th>
+                                <th class="px-4 py-2 text-gray-800">Size</th>
+                                <th class="px-4 py-2 text-gray-800">Download</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="px-4 py-2">Strategic Plan 2019-2023 English</td>
+                                <td class="px-4 py-2">PDF</td>
+                                <td class="px-4 py-2">51.4MB</td>
+                                <td class="px-4 py-2">
+                                    <a href="#" target="_blank" class="text-red-600 underline">Download</a>
+                                </td>
+                            </tr>
+                            <tr class="bg-gray-100">
+                                <td class="px-4 py-2">Strategic Plan 2019-2023 Khmer</td>
+                                <td class="px-4 py-2">PDF</td>
+                                <td class="px-4 py-2">58.3MB</td>
+                                <td class="px-4 py-2">
+                                    <a href="#" target="_blank" class="text-red-600 underline">Download</a>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+    
+                    <!-- Video -->
+                    <div class="mb-8">
+                        <video controls class="w-full max-w-3xl h-auto">
+                            <source src="https://www.youtube.com/watch?v=VPBxfqwwFDw&t=112s" type="video/mp4" />
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+    
+                    <!-- Sections -->
+                    <div id="section1" class="mb-8">
+                        <h2 class="text-2xl font-bold uppercase text-gray-800 mb-4">Introduction</h2>
+                        <p class="text-lg text-gray-600">
+                            The Royal University of Phnom Penh (RUPP), founded in 1960, has undergone a series of
+                            transformations to become the leading national university in Cambodia. Other transformations
+                            are still happening...
+                        </p>
+                    </div>
+    
+                    <div id="section2" class="mb-8">
+                        <h2 class="text-2xl font-bold uppercase text-gray-800 mb-4">Vision</h2>
+                        <p class="text-lg text-gray-600">
+                            To be Cambodia’s flagship university with regional standing in teaching and learning,
+                            research and innovation, and social engagement.
+                        </p>
+                    </div>
+    
+                    <div id="section3" class="mb-8">
+                        <h2 class="text-2xl font-bold uppercase text-gray-800 mb-4">Mission</h2>
+                        <p class="text-lg text-gray-600">
+                            To contribute to national, regional, and global sustainable development and the preservation
+                            of national cultural and natural heritage by:
+                        </p>
+                        <ul class="list-disc list-inside text-lg text-gray-600 mt-4">
+                            <li>Equipping our students with the essential knowledge, skills, values, and attitudes.</li>
+                            <li>Providing high-quality research and innovation.</li>
+                            <li>Being actively engaged with society.</li>
+                        </ul>
+                    </div>
+    
+                    <div id="section4" class="mb-8">
+                        <h2 class="text-2xl font-bold uppercase text-gray-800 mb-4">Goals</h2>
+                        <ul class="list-disc list-inside text-lg text-gray-600">
+                            <li><strong>Goal 1:</strong> Enhance teaching and learning</li>
+                            <li><strong>Goal 2:</strong> Promote research and innovation</li>
+                            <li><strong>Goal 3:</strong> Develop well-rounded citizenship and effective leadership</li>
+                            <li><strong>Goal 4:</strong> Promote sustainable development and preserve Cambodian cultural and natural heritage</li>
+                            <li><strong>Goal 5:</strong> Expand social engagement</li>
+                        </ul>
+                    </div>
+                </div>
+    
+                <!-- Right Column (Sidebar) -->
+                <div class="lg:w-1/3">
+                    <!-- Scholarship -->
+                    <div class="border border-red-600 p-4 rounded-lg bg-white mb-8">
+                        <h2 class="uppercase text-xl font-bold text-gray-800 mb-4">Scholarship</h2>
+                        <img src="https://rupp.edu.kh/images/scholarship.jpg" alt="Scholarship"
+                            class="w-full h-auto rounded-lg mb-4">
+                        <p class="text-lg text-gray-600">
+                            For students who are looking for a scholarship, RUPP provides a number of sources of
+                            scholarships.
+                            <a href="#" class="text-red-600 underline">Read more...</a>
+                        </p>
+                    </div>
+    
+                    <!-- Student Life -->
+                    <div class="border border-red-600 p-4 rounded-lg bg-white">
+                        <h2 class="uppercase text-xl font-bold text-gray-800 mb-4">Student Life</h2>
+                        <img src="https://rupp.edu.kh/images/studentlife.jpg" alt="Student Life"
+                            class="w-full h-auto rounded-lg mb-4">
+                        <p class="text-lg text-gray-600">
+                            Foreign students who are interested in studying in Cambodia should first approach their
+                            national government.
+                            <a href="#" class="text-red-600 underline">Read more...</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+
+    <section id="scrollspyHeading3" class="py-16 bg-gray-100">/
+        <div class="container mx-auto px-4">
+            <!-- Section Title -->
+            <h1 class="text-3xl font-bold mb-8">Program</h1>
+            <div class="border-b border-gray-400 pb-6">
+                <div class="lg:flex lg:space-x-8">
+                    <!-- Master Program & PhD Program -->
+                    <div class="lg:w-2/3">
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                            <!-- Program List -->
+                            <div class="border border-red-600 p-4 text-sm">
+                                <h2 class="text-xl font-bold text-gray-800 border-b border-dashed pb-2 mb-4">MASTER PROGRAM</h2>
+                                <ul class="space-y-2">
+                                    <li><a href="#" class="text-red-600 border-b-2 border-red-600 block">Biodiversity Conservation</a></li>
+                                    <li><a href="#" class="text-red-600 border-b-2 border-red-600 block">Biology skilled Applied Ecology & Mgmt</a></li>
+                                    <li><a href="#" class="text-red-600 border-b-2 border-red-600 block">Chemistry</a></li>
+                                    <li><a href="#" class="text-red-600 border-b-2 border-red-600 block">Climate Change</a></li>
+                                    <li><a href="#" class="text-red-600 border-b-2 border-red-600 block">Clinical Psychology</a></li>
+                                    <li><a href="#" class="text-red-600 border-b-2 border-red-600 block">Development Studies</a></li>
+                                    <li><a href="#" class="text-red-600 border-b-2 border-red-600 block">Education</a></li>
+                                    <li><a href="#" class="text-red-600 border-b-2 border-red-600 block">IT Engineering</a></li>
+                                    <li><a href="#" class="text-red-600 border-b-2 border-red-600 block">Science in Data Science and Engineering</a></li>
+                                    <li><a href="#" class="text-red-600 border-b-2 border-red-600 block">Linguistics</a></li>
+                                    <li><a href="#" class="text-red-600 border-b-2 border-red-600 block">Philosophy</a></li>
+                                    <li><a href="#" class="text-red-600 border-b-2 border-red-600 block">Physics</a></li>
+                                    <li><a href="#" class="text-red-600 border-b-2 border-red-600 block">Social Work</a></li>
+                                    <li><a href="#" class="text-red-600 border-b-2 border-red-600 block">Sociology</a></li>
+                                    <li><a href="#" class="text-red-600 border-b-2 border-red-600 block">TESOL</a></li>
+                                    <li><a href="#" class="text-red-600 border-b-2 border-red-600 block">Tourism & Resource Mgmt.</a></li>
+                                    <li><a href="#" class="text-red-600 border-b-2 border-red-600 block">Translation Science</a></li>
+                                    <li><a href="#" class="text-red-600 border-b-2 border-red-600 block">Biotechnology and Food Technology</a></li>
+                                    <li><a href="#" class="text-red-600 border-b-2 border-red-600 block">Family Business Management (FAB)</a></li>
+                                </ul>
+                                <h2 class="text-xl font-bold text-gray-800 border-b border-dashed pb-2 mt-8">PHD PROGRAM</h2>
+                                <ul class="space-y-2">
+                                    <li><a href="#" class="text-red-600 border-b-2 border-red-600 block">Life Science skilled Applied Ecology & Mgmt</a></li>
+                                </ul>
+                            </div>
+    
+                            <!-- Details Section -->
+                            <div class="col-span-2 border border-red-600 p-4">
+                                <div id="detailSection">
+                                    <h2 class="text-2xl font-bold text-gray-800 mb-4">Graduate Programs</h2>
+                                    <div class="pt-4 text-sm">
+                                        <img src="/images/Ch10.jpg" alt="Graduate Program Image" class="w-full rounded-lg">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <!-- Sidebar -->
+                    <div class="lg:w-1/3 space-y-8 mt-8 lg:mt-0">
+                        <!-- Student Life -->
+                        <div class="border border-red-600 p-4 rounded-lg">
+                            <h2 class="uppercase text-lg font-bold text-gray-800 mb-4">Student Life</h2>
+                            <img src="https://rupp.edu.kh/images/studentlife.jpg" alt="Student Life" class="w-full h-auto rounded-lg mb-4">
+                            <p class="text-sm text-gray-600">
+                                Foreign students who are interested in studying in Cambodia should first approach their national government.
+                                <a href="#" class="text-red-600 underline">Read more...</a>
+                            </p>
+                        </div>
+    
+                        <!-- Scholarship -->
+                        <div class="border border-red-600 p-4 rounded-lg">
+                            <h2 class="uppercase text-lg font-bold text-gray-800 mb-4">Scholarship</h2>
+                            <img src="https://rupp.edu.kh/images/scholarship.jpg" alt="Scholarship" class="w-full h-auto rounded-lg mb-4">
+                            <p class="text-sm text-gray-600">
+                                For students who are looking for a scholarship, RUPP provides a number of sources of scholarships.
+                                <a href="#" class="text-red-600 underline">Read more...</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-4">
+        <div class="max-w-7xl mx-auto text-center">
+            <p>All Rights Reserved, Copyright © 2023 Royal University of Phnom Penh (RUPP)</p>
+            <p>Designed by:
+                <a href="#" class="text-red-600 underline hover:no-underline">IT Center</a>
+            </p>
+        </div>
+    </footer>
+
+    <!-- Scrollspy JavaScript -->
+    <script>
+        // Select all nav links and sections
+        const navLinks = document.querySelectorAll(".nav-link");
+        const sections = document.querySelectorAll("section");
+
+        // Highlight the corresponding link on scroll
+        window.addEventListener("scroll", () => {
+            let current = "";
+            sections.forEach((section) => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.offsetHeight;
+                if (window.scrollY >= sectionTop - sectionHeight / 3) {
+                    current = section.getAttribute("id");
+                }
+            });
+
+            // Remove 'active' from all links and add to the current section's link
+            navLinks.forEach((link) => {
+                link.classList.remove("active-link");
+                if (link.getAttribute("href") === `#${current}`) {
+                    link.classList.add("active-link");
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>
